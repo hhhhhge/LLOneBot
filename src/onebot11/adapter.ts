@@ -128,6 +128,7 @@ class OneBot11Adapter extends Service {
           +userId || 0,
           flag,
           notify.postscript,
+          +notify.invitationExt.groupCode,
         )
         this.dispatch(event)
       }

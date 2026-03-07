@@ -31,14 +31,16 @@ export class OB11GroupRequestInviteBotEvent extends OB11BaseNoticeEvent {
   user_id: number  // 当 sub_type 为 invite 的时候， user_id 为邀请人的 QQ 号
   comment: string
   flag: string
+  source_group_id?: number
 
-  constructor(groupId: number, userId: number, flag: string, comment: string) {
+  constructor(groupId: number, userId: number, flag: string, comment: string, sourceGroupId?: number) {
     super()
     this.group_id = groupId
     this.user_id = userId
     this.comment = comment
     this.flag = flag
     this.sub_type = 'invite'
+    this.source_group_id = sourceGroupId
   }
 }
 
